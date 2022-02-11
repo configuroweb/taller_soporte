@@ -33,7 +33,7 @@
             <span class="info-box-text">Total Clientes</span>
             <span class="info-box-number text-right">
                 <?php 
-                    echo $conn->query("SELECT * FROM `client_list` ")->num_rows;
+                    echo $conn->query("SELECT `delete_flag` FROM `client_list` WHERE `delete_flag` = 0 ")->num_rows;
                 ?>
             </span>
             </div>
