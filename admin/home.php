@@ -17,7 +17,7 @@
             <span class="info-box-text">Servicios</span>
             <span class="info-box-number text-right">
                 <?php 
-                    echo $conn->query("SELECT * FROM `service_list` ")->num_rows;
+                    echo $conn->query("SELECT `delete_flag` FROM `service_list`WHERE `delete_flag` = 0 ")->num_rows;
                 ?>
             </span>
             </div>
